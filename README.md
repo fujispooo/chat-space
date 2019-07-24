@@ -14,7 +14,7 @@
 - has_many :comments
 - has_many :groups, through: :members
 
-### 一意性特約
+### 一意性制約
 - add_index :users, :email, unique: true
 
 
