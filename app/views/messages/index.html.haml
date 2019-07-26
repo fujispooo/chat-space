@@ -1,0 +1,50 @@
+.wrapper
+  = render 'chat_side'
+  .chat-main
+    .main__header
+      .main__header__left-box
+        .main__header__left-box__current-group
+          グループ名
+        %ul.main__header__left-box__member-list
+          Member :
+          %li.main__header__left-box__member-list__member
+            藤井涼
+          %li.main__header__left-box__member-list__member
+            山田美来
+          %li.main__header__left-box__member-list__member
+            Jhon-anderson
+      .main__header__right-box
+        .main__header__right-box__btn
+          Edit
+    .messages
+      .message
+        .message__upper-info
+          .message__upper-info__talker
+            藤井涼
+          .message__upper-info__date
+            2019/11/22
+        .message__text
+          .message__text__content
+            おはよう
+
+      .message
+        .message__upper-info
+          .message__upper-info__talker
+            山田美来
+          .message__upper-info__date
+            2019/11/22
+        .message__text
+          .message__text__content
+            さようなら
+
+    .form
+      %form
+        %input.form__text
+        .form__box
+          %label.form__box__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit-btn{type: 'submit', value: 'Send'}
+
+
+
