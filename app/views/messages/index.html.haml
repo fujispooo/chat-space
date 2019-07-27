@@ -17,35 +17,17 @@
       .main__header__right-box
         .main__header__right-box__btn
           Edit
-    .messages
-      .message
-        .message__upper-info
-          .message__upper-info__talker
-            藤井涼
-          .message__upper-info__date
-            2019/11/22
-        .message__text
-          .message__text__content
-            おはよう
 
-      .message
-        .message__upper-info
-          .message__upper-info__talker
-            山田美来
-          .message__upper-info__date
-            2019/11/22
-        .message__text
-          .message__text__content
-            さようなら
+    .messages
+      = render @messages
 
     .form
-      %form
-        %input.form__text
-        .form__box
-          %label.form__box__image
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
-            %input.hidden{type: 'file'}
-        %input.form__submit-btn{type: 'submit', value: 'Send'}
-
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
 
 
