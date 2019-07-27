@@ -41,10 +41,16 @@
       &__group-name{
         font-size: 15px;
         margin-bottom: 5px;
+        box-sizing: border-box;
       }
       &__latest-message{
         font-size: 11px;
       }
     }
   }
+}
+
+.chat-side a {
+  color: white;
+  text-decoration: none;
 }
