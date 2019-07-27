@@ -61,9 +61,14 @@
         }
       }
       &__text{
+        margin-bottom: 10px;
+        &__content{
         color: $dark-gray;
         font-size: 14px;
-        margin-bottom: 10px;
+        }
+      }
+      &__image{
+
       }
     }
   }
@@ -71,28 +76,32 @@
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
-    padding: 20px 40px 20px 40px;
-    &__text {
+    padding: 20px 50px 20px 40px;
+    box-sizing: border-box;
+    &__message {
       border: none;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
-      color: $dark-gray;
+      padding-left: 10px;
+      box-sizing: border-box;
     }
-    &__box {
+    &__mask {
       background-color: $white;
       float: left;
       height: 50px;
       padding-right: 10px;
+      box-sizing: border-box;
       &__image {
         font-size: 20px;
         line-height: 50px;
+        cursor: pointer;
       }
       .hidden {
         display: none;
       }
     }
-    &__submit-btn {
+    &__submit {
       background-color: $light_blue;
       border: none;
       color: $white;
@@ -101,6 +110,8 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      box-sizing: border-box;
+      cursor: pointer;
     }
   }
 }
