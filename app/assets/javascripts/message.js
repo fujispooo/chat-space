@@ -34,8 +34,8 @@ $(function(){
       var html = buildHTML(message);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      $('#message_content').val('');
       $('.form__submit').prop('disabled', false);
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('テキストもしくは画像を挿入してください');
