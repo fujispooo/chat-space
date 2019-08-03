@@ -1,9 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var img = ""
-    if (message.image !== null) {
-       img = `<img src="${message.image}">`
-    } 
+    var img  = message.image !== null ?`<img src="${message.image}">`: ""
     var html = `<div class="message">
                   <div class="message__upper-info">
                     <div class="message__upper-info__talker">
@@ -33,11 +30,10 @@ $(function(){
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(message){
+      var html = buildHTML(message);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      $('form')[0].reset();
       $('#message_content').val('');
       $('.form__submit').prop('disabled', false);
     })
