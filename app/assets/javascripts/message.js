@@ -19,7 +19,6 @@ $(function(){
                       ${img}
                   </div>
                 </div>`
-                debugger
     return html;
   }
   $('#new_message').on('submit', function(e){
@@ -37,10 +36,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('form')[0].reset();
       $('#message_content').val('');
       $('.form__submit').prop('disabled', false);
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(){
       alert('テキストもしくは画像を挿入してください');
