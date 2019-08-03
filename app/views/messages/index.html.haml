@@ -5,15 +5,12 @@
     .main__header
       .main__header__left-box
         .main__header__left-box__current-group
-          グループ名
+          =@group.name
         %ul.main__header__left-box__member-list
           Member :
-          %li.main__header__left-box__member-list__member
-            藤井涼
-          %li.main__header__left-box__member-list__member
-            山田美来
-          %li.main__header__left-box__member-list__member
-            Jhon-anderson
+          -@group.users.each do |user|
+            %li.main__header__left-box__member-list__member
+              =user.name
       .main__header__right-box
         .main__header__right-box__btn
           Edit
