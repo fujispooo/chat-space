@@ -13,7 +13,7 @@
               =user.name
       .main__header__right-box
         .main__header__right-box__btn
-          Edit
+          =link_to 'Edit',edit_group_path(@group) 
 
     .messages
       = render @messages

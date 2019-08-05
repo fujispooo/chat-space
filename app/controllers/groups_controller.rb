@@ -11,6 +11,7 @@ class GroupsController < ApplicationController
 
   def edit
     set_group
+    @user= User.new
   end
 
   def create
