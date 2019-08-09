@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
     var img  = message.image !== null ?`<img src="${message.image}">`: ""
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="message__upper-info">
                     <div class="message__upper-info__talker">
                       ${message.user_name} 
