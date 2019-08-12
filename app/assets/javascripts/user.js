@@ -20,7 +20,7 @@ $(function(){
     $('#user-search-result').append(html);
   }
   
-  function appendMembers(user_name, user_id) {
+  function appendMembers(user_name, user_id){
     var html = `<div class="chat-group-user">
                   <input type = "hidden", value = ${ user_id }, name = "group[user_ids][]", id ="group_user_ids_${user_id}">
                   <p class="chat-group-user__name">
@@ -47,15 +47,14 @@ $(function(){
         $('#user-search-result').empty();
           if (users.length !==0){
             users.forEach(function(user){
-              var html = appendUser(user);
+              appendUser(user);
             })
           }else {
-            var html = notUser();
+            notUser();
           }
       })
       .fail(function(){
         alert('ユーザー検索に失敗しました');
-        
       });
     });
   });
@@ -64,7 +63,7 @@ $(function(){
     $('#user-search-result').on("click", ".chat-group-user__btn--add",function(){
       var user_name = $(this).data('name');
       var user_id = $(this).data('id');
-      var html = appendMembers(user_name, user_id);
+      appendMembers(user_name, user_id);
       $(this).parent().remove();
     });
   
