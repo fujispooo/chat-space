@@ -64,7 +64,6 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
-    choice (0.2.0)
     coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -160,7 +159,7 @@ GEM
       method_source (~> 0.9.0)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    puma (3.12.1)
+    puma (3.12.4)
     rack (2.0.7)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -179,11 +178,6 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
-    rails-erd (1.6.0)
-      activerecord (>= 4.2)
-      activesupport (>= 4.2)
-      choice (~> 0.2.0)
-      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.2.0)
       loofah (~> 2.2, >= 2.2.2)
     railties (5.0.7.2)
@@ -200,7 +194,6 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
-    ruby-graphviz (1.2.4)
     ruby_parser (3.13.1)
       sexp_processor (~> 4.9)
     sass (3.7.4)
@@ -273,9 +266,8 @@ DEPENDENCIES
   mini_magick
   mysql2 (>= 0.3.18, < 0.6.0)
   pry-rails
-  puma (~> 3.0)
+  puma (~> 3.12)
   rails (~> 5.0.7, >= 5.0.7.2)
-  rails-erd
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
